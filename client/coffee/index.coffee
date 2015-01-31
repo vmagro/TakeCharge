@@ -21,3 +21,18 @@ $(document).keydown((e) ->
   e.preventDefault
   return
 )
+
+firebase = new Firebase('https://takecharge.firebaseio.com/')
+firebase.on('child_added', (snapshot) ->
+  if $('.device-entry[data-id=' + snapshot.key() + ']').length == 0
+    template = Handlebars.compile('<div data-index="{{{index}}}" data-id="{{{id}}}" class="device-entry"><img src="{{{img}}}"><i class="fa fa-play selection" style="visibility: visible;"></i><a href="/device/{{{id}}}" class="name">{{name}}</a></div>')
+    val = snapshot.val()
+    $('#devices').append(template({
+      index: $('.device-entry').length
+      id: snapshot.key()
+      img: val.userinfo.pic
+      name: val.userinfo.name
+    }))
+
+    selectDevice(selectedIndex)
+)

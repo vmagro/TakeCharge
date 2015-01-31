@@ -1,13 +1,14 @@
 extends layout
 
 block content
-    each device, i in devices
-        .row.l_left-row
-            .col-md-12
-                .device-entry(data-index=i)
-                    img(src=device.image)
-                    i.fa.fa-play.selection
-                    a.name(href='/device/'+device.id)= device.name
+    #devices
+        each device, i in devices
+            .row.l_left-row
+                .col-md-12
+                    .device-entry(data-index=i, data-id=device.id)
+                        img(src=device.image)
+                        i.fa.fa-play.selection
+                        a.name(href='/device/'+device.id)= device.name
 
     .row.l_title-container.s_title-container.l_left-row
         .col-md-12

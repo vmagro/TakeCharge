@@ -32,6 +32,10 @@ html, body {
   height: 45px;
 }
 
+.container {
+//  width: 80%;
+}
+
 .device-entry {
   width: 200px;
   padding: 10px;
@@ -119,8 +123,8 @@ h2.name {
 
   white-space: nowrap;
   overflow: hidden;
-  -webkit-animation: typed 5s steps(50, end);
-  animation: typed 5s steps(50, end)
+  -webkit-animation: typed 2.5s steps(50, end);
+  animation: typed 2.5s steps(50, end)
 }
 
 @keyframes typed {
