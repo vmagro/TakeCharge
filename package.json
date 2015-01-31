@@ -6,7 +6,8 @@
     "underscore": "~1.5.1",
     "express": "3.0.0rc5",
     "querystring": "*",
-    "bcrypt": "0.7.6"
+    "bcrypt": "0.7.6",
+    "firebase": "~2.1.2"
   },
   "devDependencies": {
     "grunt": "~0.4.0rc7",

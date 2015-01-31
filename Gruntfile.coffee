@@ -55,6 +55,7 @@ module.exports = (grunt) ->
         options:
           server: './app'
           port: 3000
+          debug: true
     
     sass:
       development:

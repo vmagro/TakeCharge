@@ -16,3 +16,23 @@ html, body {
 #footer {
   height: 45px;
 }
+
+.device-entry {
+  width: 300px;
+  padding: 10px;
+
+  background-color: #f5f5f5;
+  border: 1px lightgray solid;
+  border-radius: 2px;
+  box-shadow: 2px 2px 2px #eeeeee;
+
+  img {
+    display: block;
+  }
+
+  .name {
+    font-size: 1.5em;
+    color: black;
+  }
+
+}

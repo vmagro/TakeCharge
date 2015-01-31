@@ -4,7 +4,9 @@ block content
     .row.l_left-row
         each device in devices
             .col-md-12
-                h1 public#index
+                .device-entry
+                    img(src='http://peetahzee.com/me.jpg')
+                    a.name(href='/device/'+device.id)= device.name
 
     .row.l_title-container.s_title-container.l_left-row
         .col-md-12
