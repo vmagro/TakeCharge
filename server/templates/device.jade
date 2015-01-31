@@ -23,8 +23,11 @@ block content
 
         .col-md-4
             h3 Notifications
-            each notification in device.notifications
-                .notification
-                    span.ticker-text= notification.tickerText
-                    span.app-name= 'From ' + notification.appName
-                    br
+            #notifications
+                each notification in device.notifications
+                    .notification(data-id=notification.id)
+                        span.ticker-text= notification.tickerText
+                        span.app-name= 'From ' + notification.appName
+                        br
+
+    script(src='/assets/js/device.js')

@@ -113,3 +113,24 @@ h2.name {
     visibility: visible;
   }
 }
+
+.typed {
+  width: 30em;
+
+  white-space: nowrap;
+  overflow: hidden;
+  -webkit-animation: typed 5s steps(50, end);
+  animation: typed 5s steps(50, end)
+}
+
+@keyframes typed {
+  from {
+    width: 0;
+  }
+}
+
+@-webkit-keyframes typed {
+  from {
+    width: 0;
+  }
+}
