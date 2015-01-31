@@ -10,7 +10,9 @@ deviceController.index = (req, res) ->
       devices.push({
         id: child.key()
         name: child.val().userinfo.name
+        image: child.val().userinfo.pic
       })
+      return false
     )
     res.render 'index', {
       devices: devices
