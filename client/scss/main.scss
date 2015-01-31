@@ -75,13 +75,15 @@ h2.name {
 }
 
 .blinking-cursor {
-  width: 10px;
-  height: 1em;
+  width: 12px;
+  height: 2em;
   background-color: lime;
   float: left;
+  margin-top: 20px;
+  margin-left: 5px;
 
-  animation: blink 1s step-end infinite;
-  -webkit-animation: blink 1s step-end infinite;
+  animation: blink 2s step-end infinite;
+  -webkit-animation: blink 2s step-end infinite;
 }
 
 @keyframes blink {
