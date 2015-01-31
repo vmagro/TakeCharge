@@ -36,3 +36,7 @@ firebase.on('child_added', (snapshot) ->
 
     selectDevice(selectedIndex)
 )
+
+firebase.on('child_removed', (snapshot) ->
+  $('.device-entry[data-id=' + snapshot.key() + ']').remove()
+)
