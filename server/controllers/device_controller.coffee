@@ -22,8 +22,11 @@ deviceController.index = (req, res) ->
 deviceController.show = (req, res) ->
   firebase = new Firebase('https://takecharge.firebaseio.com/')
   firebase.child(req.params.id).once('value', (snapshot) ->
+    device = snapshot.val()
+    if !device.notifications
+      device.notifications = []
     res.render('device', {
-      device: snapshot.val()
+      device: device
     })
   )
 
