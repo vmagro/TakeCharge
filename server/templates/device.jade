@@ -1,0 +1,9 @@
+extends layout
+
+block content
+    img.user-pic(src=device.userinfo.pic)
+    h2.name= device.userinfo.name
+    img(src='https://maps.googleapis.com/maps/api/staticmap?zoom=17&size=400x400&center='+device.location.lat+','+device.location.lng+'&markers=color:red|'+device.location.lat+','+device.location.lng)
+    .row.l_left-row
+        .col-md-4
+            .con

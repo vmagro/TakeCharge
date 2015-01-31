@@ -18,7 +18,11 @@ deviceController.index = (req, res) ->
   )
 
 deviceController.show = (req, res) ->
-  res.send('show ' + req.params.id)
-  res.end()
+  firebase = new Firebase('https://takecharge.firebaseio.com/')
+  firebase.child(req.params.id).once('value', (snapshot) ->
+    res.render('device', {
+      device: snapshot.val()
+    })
+  )
 
 module.exports = deviceController
