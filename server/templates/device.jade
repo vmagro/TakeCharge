@@ -1,8 +1,13 @@
 extends layout
 
 block content
-    img.user-pic(src=device.userinfo.pic)
-    h2.name= device.userinfo.name
+    div(style='margin-bottom: 10px')
+        img.user-pic(src=device.userinfo.pic)
+        h2.name= device.userinfo.name
+        .clear
+
+    p= 'Model: ' + device.userinfo.model
+    p= 'Android Version: ' + device.userinfo.androidVersion
     img(src='https://maps.googleapis.com/maps/api/staticmap?zoom=17&size=400x400&center='+device.location.lat+','+device.location.lng+'&markers=color:red|'+device.location.lat+','+device.location.lng)
     .row.l_left-row
         .col-md-4
