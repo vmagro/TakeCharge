@@ -75,6 +75,15 @@ h2.name {
   }
 }
 
+.notification {
+  .ticker-text {
+    display: block;
+  }
+  .app-name {
+    display: block;
+  }
+}
+
 .blinking-cursor {
   width: 12px;
   height: 2em;

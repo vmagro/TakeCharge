@@ -20,3 +20,11 @@ block content
                     span.name= contact.name
                     span.phone= contact.phone
                     br
+
+        .col-md-4
+            h3 Notifications
+            each notification in device.notifications
+                .notification
+                    span.ticker-text= notification.tickerText
+                    span.app-name= 'From ' + notification.appName
+                    br
