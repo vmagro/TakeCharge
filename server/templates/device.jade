@@ -14,7 +14,7 @@ block content
             img(src='https://maps.googleapis.com/maps/api/staticmap?zoom=17&size=350x350&style=feature:road.local|element:geometry|color:0x00ff00&style=feature:all|element:geometry.fill|color:0x000000&style=feature:all|element:labels|visibility:off&center='+device.location.lat+','+device.location.lng+'&markers=color:white|'+device.location.lat+','+device.location.lng)
 
         .col-md-3
-            h3 Contacts
+            h3(style='text-decoration: underline;') Contacts
             #contacts
                 each contact in device.contacts
                     .contact
@@ -23,7 +23,7 @@ block content
                         br
 
         .col-md-5
-            h3 Notifications
+            h3(style='text-decoration: underline;') Notifications
             #notifications
                 each notification in device.notifications
                     .notification(data-id=notification.id)

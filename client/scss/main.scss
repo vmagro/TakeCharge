@@ -11,6 +11,10 @@ html, body {
   overflow: hidden;
 }
 
+h1, h2, h3, h4, h5, h6 {
+  font-family: monospace;
+}
+
 .navbar {
   a {
     font-family: monospace;
@@ -20,6 +24,8 @@ html, body {
 
 .navbar-brand {
   margin-left: 20px;
+  font-size: 30px;
+  text-decoration: underline;
 }
 
 #wrap {
