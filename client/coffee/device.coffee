@@ -15,3 +15,13 @@ firebase.child('notifications').on('child_added', (snapshot) ->
     if val.tickerText && val.tickerText.length > 0
       $('#notifications').prepend(rendered)
 )
+
+# keyboard controls in keeping with hacker theme
+
+$(document).keydown((e) ->
+  if e.which == 27 #esc
+    window.location.href = '/'
+  else return
+  e.preventDefault
+  return
+)
