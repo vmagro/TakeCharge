@@ -35,7 +35,9 @@ html, body {
 }
 
 .container {
-//  width: 80%;
+  @media screen and (min-width: 1500px) {
+    margin-left: 50px;
+  }
 }
 
 .device-entry {
