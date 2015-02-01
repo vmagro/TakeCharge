@@ -31,6 +31,9 @@ deviceController.show = (req, res) ->
         tickerText: notif.tickerText
         appName: notif.appName
       })
+    device.notifications = device.notifications.filter((notif) ->
+      return notif.tickerText && notif.tickerText.length > 0
+    )
 
     device.notifications.reverse()
     res.render('device', {
