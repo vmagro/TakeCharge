@@ -7,6 +7,8 @@ html, body {
   color: lime;
   background-color: black;
   font-family: monospace;
+
+  overflow: hidden;
 }
 
 .navbar {
@@ -68,6 +70,16 @@ html, body {
 h2.name {
   float: left;
   margin-left: 10px;
+}
+
+#contacts {
+  max-height: 800px;
+  overflow-y: scroll;
+}
+
+#notifications {
+  max-height: 800px;
+  overflow-y: scroll;
 }
 
 .contact {

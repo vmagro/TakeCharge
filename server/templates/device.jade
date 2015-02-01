@@ -15,11 +15,12 @@ block content
 
         .col-md-3
             h3 Contacts
-            each contact in device.contacts
-                .contact
-                    span.name= contact.name
-                    span.phone= contact.phone
-                    br
+            #contacts
+                each contact in device.contacts
+                    .contact
+                        span.name= contact.name
+                        span.phone= contact.phone
+                        br
 
         .col-md-4
             h3 Notifications
