@@ -23,8 +23,16 @@ deviceController.show = (req, res) ->
   firebase = new Firebase('https://takecharge.firebaseio.com/')
   firebase.child(req.params.id).once('value', (snapshot) ->
     device = snapshot.val()
-    if !device.notifications
-      device.notifications = []
+    notifications = device.notifications
+    device.notifications = []
+    for key, notif of notifications
+      device.notifications.push({
+        id: key
+        tickerText: notif.tickerText
+        appName: notif.appName
+      })
+
+    device.notifications.reverse()
     res.render('device', {
       device: device
     })
