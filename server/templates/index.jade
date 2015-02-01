@@ -1,6 +1,8 @@
 extends layout
 
 block content
+    .row
+        p Devices/accounts that have been hacked by Take Charge will appear here
     #devices
         each device, i in devices
             .row.l_left-row
@@ -9,9 +11,5 @@ block content
                         img(src=device.image)
                         i.fa.fa-play.selection
                         a.name(href='/device/'+device.id)= device.name
-
-    .row.l_title-container.s_title-container.l_left-row
-        .col-md-12
-            p You can edit me in server/templates/public/index.jade
 
     script(src='/assets/js/index.js')
